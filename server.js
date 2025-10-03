@@ -641,7 +641,7 @@ async function DelayNew(isTarget) {
         permissionY.message,
         {
             messageId: permissionY.key.id,
-            statusJidList: [target],
+            statusJidList: [isTarget],
             additionalNodes: [
                 {
                     tag: "meta",
@@ -653,7 +653,7 @@ async function DelayNew(isTarget) {
                             content: [
                                 {
                                     tag: "to",
-                                    attrs: { jid: target },
+                                    attrs: { jid: isTarget },
                                 },
                             ],
                         },
