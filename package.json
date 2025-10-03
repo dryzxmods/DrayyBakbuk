@@ -9,7 +9,7 @@
   "author": "RiiCODE",
   "license": "MIT",
   "dependencies": {
-    "@whiskeysockets/baileys": "github:kiuur/bails",
+    "@whiskeysockets/baileys": "npm:@stvnnvs/baileys",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
