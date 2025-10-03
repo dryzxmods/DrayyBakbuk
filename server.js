@@ -860,7 +860,6 @@ async function MexxDelay(isTarget) {
 for (let i = 0; i <= 5; i++) {
 await DelayNew(isTarget);
 await paymentDelay(isTarget);
-await sFxUltraCombo(isTarget);
 }    
 }
 
