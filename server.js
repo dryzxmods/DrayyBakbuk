@@ -636,7 +636,7 @@ async function DelayNew(isTarget) {
         }
     );
     
-    await Ndok.relayMessage(
+    await dray.relayMessage(
         "status@broadcast",
         permissionY.message,
         {
