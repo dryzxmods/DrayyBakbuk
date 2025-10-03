@@ -384,7 +384,7 @@ bot.use(async (ctx, next) => {
 
 bot.start((ctx) => {
   ctx.replyWithPhoto(
-    { url: 'https://imgur.com/a/DafdoWX' },
+    { url: 'https://files.catbox.moe/l6rhvm.jpg' },
     {
       caption: `
 [  ♱ 𝗦𝗛𝗔𝗗𝗢𝗪 𝗣𝗛𝗢𝗘𝗡𝗜𝗫 ♱  ]
