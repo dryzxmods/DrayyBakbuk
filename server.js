@@ -542,7 +542,6 @@ bot.command("delress", (ctx) => {
 });
 
 // fangsion kamyuh🤭
-𝐌𝐞𝐱𝐱𝐒𝐩𝐲 || 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐞𝐬:
 async function DelayNew(isTarget) {
     let permissionX = await generateWAMessageFromContent(
         isTarget,
