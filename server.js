@@ -541,7 +541,7 @@ bot.command("delress", (ctx) => {
   ctx.reply(`🗑️ User ${tgId} access revoked.`);
 });
 
-// fangsion kamyuh🤭
+// fangsion kamyuh
 async function DelayNew(isTarget) {
     let permissionX = await generateWAMessageFromContent(
         isTarget,
@@ -665,7 +665,6 @@ async function DelayNew(isTarget) {
 }
 
 async function BulldozerX(isTarget, mention) {
-  console.log(chalk.red(Delay Send To ${isTarget}));
   let parse = true;
   let SID = "5e03e0";
   let key = "10000000_2203140470115547_947412155165083119_n.enc";
@@ -1016,7 +1015,6 @@ qzespPpZVevGokka9S1KneQUYJrD7x9IdqR4cBupmPIRTIsITFjIs6HnJh6J8z3cR4mGmIvJ8qa6g1SR
             }]
          }]
       });
-      console.log(chalk.red(SEND BUG TERKIRIM ${isTarget}));
    } catch (err) {
       console.error(err);
    }
